@@ -1,0 +1,167 @@
+@import url("https://use.typekit.net/epz2uet.css");
+@import "~bootstrap/scss/bootstrap";
+@import "flickity";
+@import "base";
+
+$body-color: black;
+
+.display-100 {
+	@extend .display-1;
+}
+
+body {
+  color: $body-color;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-size: 1.1em;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.ricapp-nav {
+	@extend .site-header, .sticky-top, .py-1;
+}
+.ricapp-nav-inner {
+	@extend .container, .d-flex, .flex-column, .flex-md-row, .justify-content-between;
+}
+.ricapp-nav-item-mobile {
+	@extend .py-2;
+}
+.ricapp-nav-item {
+	@extend .py-2, .d-none, .d-md-inline-block;
+}
+.ricapp-nav-inner * {
+	@extend .ricapp-nav-item;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+
+.carousel {
+	@extend .pt-3;
+	background: #FFF;
+}
+
+.carousel-cell {
+	@extend .text-center;
+
+	display: block;
+	width: 300px;
+  /*height: 200px;
+  margin-right: 10px;
+  background: #8C8;*/
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+.carousel-cell img {
+	@extend .mb-2, .rounded;
+}
+
+.carousel-cell h4 {
+	font-weight: 600;
+}
+.carousel-cell h6 {
+	max-width: 280px;
+}
+
+.carousel-cell h4, .carousel-cell h5 {
+	@extend .d-block;
+}
+
+.carousel-cell:before {
+  /*display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;*/
+}
+
+.anchor-spacer {
+    margin-bottom: 4em;
+    display: block;
+}
+
+.carousel-static-left, .carousel-static-right {
+	position: absolute;	
+	pointer-events:none;
+}
+.carousel-static-left {
+	width: 30px;
+    height: 100%;
+    left: 0;
+    background: linear-gradient(90deg, #ffffff99, #ffffff00);
+    z-index: 10;
+}
+.carousel-static-right {
+	width: 30px;
+    height: 100%;
+    right: 0;
+    background: linear-gradient(90deg, #ffffff00, #ffffff99);
+    z-index: 10;
+}
+
+
+.ricapp-schedule {
+	@extend .table;
+}
+.ricapp-schedule .ricapp-schedule-details {
+	@extend .text-left;
+}
+.ricapp-schedule .ricapp-schedule-results p {
+	@extend .mb-0;
+	overflow: hidden;
+	max-width: 400px;
+}
+.ricapp-prev-years {
+	@extend .text-center, .my-4;
+}
+.ricapp-prev-years a {
+	@extend .mx-4;
+	color: #252525;
+}
+.ricapp-footer {
+	@extend .container, .py-5;
+}
+.ricapp-footer-inner {
+	@extend .row;
+}
+.ricapp-footer-submenu {
+	@extend .col-6, .col-md;
+}
+.ricapp-footer-submenu ul {
+	@extend .list-unstyled;
+}
+.ricapp-footer-submenu a {
+	@extend .text-muted;
+}
+.ricapp-footer-text {
+	@extend .col-12, .col-md;
+}
+.ricapp-footer-text .ricapp-footer-name {
+	@extend .h5;
+}
+.ricapp-footer-text .ricapp-footer-addi {
+	@extend .h6, .text-muted;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
