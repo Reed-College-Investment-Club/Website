@@ -39,7 +39,10 @@ module.exports = merge(common, {
       },
       {
         test: /\.s?css$/i,
-        use: extractCSS.extract([
+        use: [
+          {
+            loader: 'style-loader', // inject CSS to page
+          },
           {
             loader: 'css-loader', // translates CSS into CommonJS modules
           },
@@ -57,9 +60,8 @@ module.exports = merge(common, {
           {
             loader: 'sass-loader' // compiles Sass to CSS
           }
-      ])
+        ]
       }
     ]
   }
 });
-
