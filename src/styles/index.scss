@@ -149,14 +149,46 @@ p {
 .ricapp-footer-text .ricapp-footer-addi {
 	@extend .h6, .text-muted;
 }
+.ricapp-schedule-details-actions {
+	max-width: 200px;
+}
 
 
+.ricapp-sectioned {
+  column-width: 280px;
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
+}
+@media (max-width: 800px) {
+  .ricapp-sectioned {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+  }
+}
+@media (max-width: 500px) {
+  .ricapp-sectioned {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+  }
+}
 
+.ricapp-member-list {
+  
+}
+.ricapp-member-list li {
+  line-height: 1.3em;
+  list-style: none;
+  text-indent: -10px;
+}
 
-
-
-
-
+.ricapp-member-list li:before {
+  content: "-";
+  text-indent: -10px;
+  margin-right: 10px;
+}
 
 
 

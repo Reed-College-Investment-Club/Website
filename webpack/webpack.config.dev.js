@@ -29,9 +29,20 @@ module.exports = merge(common, {
         }
       },
       {
-        test: /\.handlebars$/,
+        test: /\.hbs$/,
         loader: "handlebars-loader"
-      },
+      },/*
+      {
+        test: /\.html$/,
+        use: [ {
+          loader: 'html-loader',
+          options: {
+            minimize: true,
+            removeComments: false,
+            collapseWhitespace: false
+          }
+        }],
+      },*/
       {
         test: /\.js$/,
         include: Path.resolve(__dirname, '../src'),

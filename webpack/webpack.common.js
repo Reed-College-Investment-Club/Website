@@ -3,6 +3,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+let pages = ['index', 'members'];
+
+let HtmlWebpackPages = pages.map(function(entryName) {
+  return new HtmlWebpackPlugin({
+    filename: entryName + '.html',
+    template: Path.resolve(__dirname, `../src/${entryName}.html`)
+})
+
 module.exports = {
   entry: {
     app: Path.resolve(__dirname, '../src/scripts/index.js')
@@ -21,11 +29,12 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       { from: Path.resolve(__dirname, '../public'), to: 'public' }
-    ]),
+    ])/*,
     new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: Path.resolve(__dirname, '../src/index.html')
-    })
-  ],
+    }),*/
+  ].concat(HtmlWebpackPages),
   resolve: {
     alias: {
       '~': Path.resolve(__dirname, '../src')

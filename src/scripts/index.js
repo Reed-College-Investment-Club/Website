@@ -3,4 +3,4 @@ import '../styles/index.scss';
 import 'bootstrap';
 import './homepage.js';
 
-console.log('webpack starterkit');
+console.log('up and running');
